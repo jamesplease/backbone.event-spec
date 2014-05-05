@@ -1,7 +1,7 @@
 backbone.event-spec
 ===================
 
-The unofficial specification for Backbone Event names.
+An unofficial specification for Backbone Event names.
 
 ### About
 
@@ -9,8 +9,8 @@ Backbone has a simple event system that is used to transfer information between 
 common example of this is the `change` event fired when a Model's property changes.
 
 This is an unofficial specification that combines a precedent set by Backbone with a few additional rules to create
-a consistent, extensible event naming system. This allows you to use Backbone Events in a predictable manner throughout
-your application in more ways.
+a consistent, extensible event naming system. This allows you to use custom Backbone Events in a predictable manner throughout
+your application.
 
 ### Structure
 
@@ -35,7 +35,7 @@ separation mechanisms, such as period, hyphenating or camelcase.
 
 ##### The adverb
 
-The first part of the event name is the adverb. The most common adverb is `before`. The adverb is optional. In Backbone
+The first part of the event name is the adverb. The most common adverb to use is `before`. The adverb is optional. In Backbone
 there are no standard events triggered with an adverb.
 
 The following example shows an event that might be triggered before a close event on a custom class.
@@ -45,7 +45,7 @@ The following example shows an event that might be triggered before a close even
 Do note that you should never use the adverb `after`. Backbone Events without an adverb are assumed to always be fired after
 the event occurs. For instance, `change` is only fired on the Model *after* its properties have been changed.
 
-##### Action
+##### The action
 
 The action is always present tense. The action should be a simple verb that describes the event
 that just happened. The action is the only required part of the event name.
@@ -58,7 +58,7 @@ that just happened. The action is the only required part of the event name.
 'render';
 ```
 
-##### Subject
+##### The subject
 
 The last part of the event name is the subject. Like the adverb, the subject is optional. An event may have at most
 a single subject.
@@ -95,3 +95,13 @@ An example of an event with a compound subject would be:
 `show:red:button`
 
 In this case, the subject has an adjective describing it which is separated by the colon.
+
+### Consistency
+
+This specification is unofficial, so you shouldn't think of it as the *right way* to name your events. It's just an opinionated way to be consistent.
+And what's more important than the details of this document are just that: its philosophy of consistency. However you decide to name your events is
+absolutely fine, so long as you follow some guidelines. This is especially important as your applications become bigger and bigger. It can save time
+if you can just 'calculate' what the event name is based on known rules, rather than always having to look it up.
+
+And please feel free to suggest changes!
+as it's handled in a predictable manner 
