@@ -98,10 +98,11 @@ In this case, the subject has an adjective describing it which is separated by t
 
 ### Consistency
 
-This specification is unofficial, so you shouldn't think of it as the *right way* to name your events. It's just an opinionated way to be consistent.
-And what's more important than the details of this document are just that: its philosophy of consistency. However you decide to name your events is
-absolutely fine, so long as you follow some guidelines. This is especially important as your applications become bigger and bigger. It can save time
-if you can just 'calculate' what the event name is based on known rules, rather than always having to look it up.
+This specification is unofficial, so you shouldn't think of it as the *right way* to name your events. [Even I'm not sure](https://github.com/jmeas/backbone.event-spec/issues/1)
+if I completely like everything here. All it is is just an opinionated way to remain consistent.
+
+And that philosophy of consistency is more important than any rule in this document. However you decide to name your events is
+absolutely fine, so long as you follow some set of rules. This becomes increasingly important as your applications grow. It can save time
+if you can just 'know' what the event name is based on your own guidelines, rather than always having to look it up.
 
 And please feel free to suggest changes!
-as it's handled in a predictable manner 
