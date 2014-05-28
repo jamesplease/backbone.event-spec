@@ -20,17 +20,17 @@ Events in Backbone classes should follow the following format:
 
 ##### The Separator
 
-The separator to be used within event names is a colon, `:`. The colon should be used instead of other
-separation mechanisms, such as period, hyphenating or camelcase.
+The separator is used to separate the three pieces of the event name, described above. It's a colon, `:`. The colon should only
+be used to separate the different sections of the event name. Within each section camel case should be used for multiple words.
 
 ```js
-// Events that use an incorrect separator
-'show:myView';
-'show:my.view';
-'show:my-view';
-
-// Events that use a correct separator
+// Using the separator incorrectly
+'showMyView';
+'show-view';
 'show:my:view';
+
+// Using it correctly
+'show:myView';
 ```
 
 ##### The adverb
@@ -69,11 +69,11 @@ to separate out the pieces.
 Here is an example event name that might be fired when a child view is shown by the parent:
 
 ```js
-show:child
+'show:child';
 ```
 
 When the subject of the verb is the object itself you can omit it. For instance, the event is just `change` in Backbone, not
-`change:model`. Only when it's referencing a particulaly property of the model does it use the subject.
+`change:model`. Only when it's referencing a particular property of the model does it use the subject.
 
 We can use this pattern to determine possible event names for rendering a view.
 
@@ -87,22 +87,21 @@ We can use this pattern to determine possible event names for rendering a view.
 
 ##### Compound actions and subjects
 
-If any part of the event consists of more than one word, then a colon should be used to separate them. No standard Backbone Event has
+If any part of the event consists of more than one word, then camel case should be used to separate them. Note that no standard Backbone Event has
 a compound action or subject, and in general they should be avoided when possible.
 
 An example of an event with a compound subject would be:
 
-`show:red:button`
+`show:redButton`
 
-In this case, the subject has an adjective describing it which is separated by the colon.
+In this case, the subject has an adjective describing it, and they are written in camel case.
 
 ### Consistency
 
-This specification is unofficial, so you shouldn't think of it as the *right way* to name your events. [Even I'm not sure](https://github.com/jmeas/backbone.event-spec/issues/1)
-if I completely like everything here. All it is is just an opinionated way to remain consistent.
+This specification is unofficial, so you shouldn't think of it as the *right way* to name your events.
+[Even I'm not sure](https://github.com/jmeas/backbone.event-spec/issues/1) if I completely like everything here. This is
+just an opinionated way to remain consistent.
 
 And that philosophy of consistency is more important than any rule in this document. However you decide to name your events is
 absolutely fine, so long as you follow some set of rules. This becomes increasingly important as your applications grow. It can save time
 if you can just 'know' what the event name is based on your own guidelines, rather than always having to look it up.
-
-And please feel free to suggest changes!
